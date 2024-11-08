@@ -57,11 +57,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/mmdemotest.loader.js";
+      var loaderUrl = buildUrl + "/webgls.loader.js";
       var config = {
-        dataUrl: buildUrl + "/mmdemotest.data.unityweb",
-        frameworkUrl: buildUrl + "/mmdemotest.framework.js.unityweb",
-        codeUrl: buildUrl + "/mmdemotest.wasm.unityweb",
+        dataUrl: buildUrl + "/webgls.data.unityweb",
+        frameworkUrl: buildUrl + "/webgls.framework.js.unityweb",
+        codeUrl: buildUrl + "/webgls.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "dont-starve-demo",
@@ -108,7 +108,7 @@
               }).then((unityInstance) => {
                 loadingBar.style.display = "none";
                 fullscreenButton.onclick = () => {
-                  unityInstance.SetFullscreen(1);
+                  document.makeFullscreen('unity-container');
                 };
               }).catch((message) => {
                 alert(message);
